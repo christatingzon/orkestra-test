@@ -6,13 +6,13 @@
       <div class="bg-white rounded-lg text-black w-85 mr-2 pb-10">
         <h2 class="uppercase text-xs text-primary-300 bg-primary-500 rounded-t-lg font-bold py-4 px-5">Profiles</h2>
 
-        <div v-for="(profile, index) in profiles" :key="index" class="py-4 px-5 border-b hover:bg-primary-400 cursor-pointer">
+        <div v-for="(profile, index) in profiles" :key="index" class="py-4 px-5 border-b hover:bg-primary-400 cursor-pointer" :class="{'bg-primary-400': selectedProfile == profile.name }" @click="selectProfile(profile.name)">
           <h3 class="text-primary-200 text-lg font-bold">{{ profile.name }}</h3>
           <p class="text-lg font-light">{{ profile.value }} MWh</p>
         </div>
       </div>
       <div class="bg-white text-black flex-1 rounded-lg p-5">
-        Test {{ dataset }}
+        {{ selectedProfile }} {{ dataset }}
       </div>
     </div>
   </div>
@@ -26,6 +26,16 @@ export default {
   name: 'IndexPage',
   asyncData ({ params }) {
     return { profiles, dataset };
+  },
+  data () {
+    return {
+      selectedProfile: ''
+    };
+  },
+  methods: {
+    selectProfile(name) {
+      this.selectedProfile = name;
+    }
   }
 };
 </script>
