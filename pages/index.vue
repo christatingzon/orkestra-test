@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="bg-white text-black flex-1 rounded-lg p-5">
-        Test {{ authors }}
+        Test {{ dataset }}
       </div>
     </div>
   </div>
@@ -20,11 +20,12 @@
 
 <script>
 import profiles from '~/static/load-profiles.json';
+import dataset from '~/static/sample-dataset.json';
 
 export default {
   name: 'IndexPage',
   asyncData ({ params }) {
-    return { profiles };
+    return { profiles, dataset };
   }
 };
 </script>
