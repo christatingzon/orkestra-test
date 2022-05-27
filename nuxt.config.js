@@ -15,12 +15,15 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    bodyAttrs: {
+      class: 'bg-primary-100 text-white font-sans'
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@assets/style.css',
-    '@/assets/tailwind.css'
+    '@assets/css/style.css',
+    '@assets/css/tailwind.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
