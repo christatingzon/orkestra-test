@@ -13,6 +13,12 @@ module.exports = {
       },
       spacing: {
         85: '21.875rem'
+      },
+      minHeight: {
+        85: '21.875rem'
+      },
+      maxWidth: {
+        85: '21.875rem'
       }
     },
     container: {
