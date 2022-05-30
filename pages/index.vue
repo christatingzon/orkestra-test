@@ -12,7 +12,9 @@
         </div>
       </div>
       <div class="bg-white text-black flex-1 rounded-lg p-5">
-        {{ selectedProfile }} {{ dataset }}
+        <h2 class="text-2xl font-bold text-black">{{ selectedProfile }}</h2>
+
+        <MyChart />
       </div>
     </div>
   </div>
