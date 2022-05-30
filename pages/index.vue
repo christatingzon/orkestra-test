@@ -61,7 +61,6 @@ export default {
       if(this.selectedProfile !== prevSelected) {
         this.graphCompKey ++;
       }
-
     }
   }
 };
